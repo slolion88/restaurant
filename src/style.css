@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Yesteryear";
+    src: url("/src/assets/fonts/Yesteryear-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PoiretOne";
+    src: url("/src/assets/fonts/PoiretOne-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cream: rgb(235, 229, 227);
+    --green: rgb(5, 80, 90);
+    --blue: rgba(0, 40, 60);
+
+    --small: calc(.25rem + 1vw);
+    --normal: calc(.75rem + 1vw);
+}
+
+body {
+    background: url("/src/assets/images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: "PoiretOne";
+    font-size: var(--normal);
+    color: var(--green);
+    line-height: 1.5;
+    letter-spacing: .1rem;
+    -webkit-font-smoothing: antialiased;
+
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 150px 1fr 150px;
+}
+
+header {
+    background-color: var(--green);
+
+    text-align: center;
+
+    box-shadow: inset 0px -10px 20px -10px var(--blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    background-color: var(--cream);
+    color: var(--green);
+
+    margin: 0px 250px;
+    padding: 5%;
+
+    min-width: 450px;
+}
+
+.logo,
+.welcome,
+.about {
+    display: flex;
+    gap: 5%;
+}
+
+.logo {
+    justify-content: center;
+}
+
+h1,
+h2 {
+    font-family: "Yesteryear";
+    color: var(--blue);
+}
+
+h2 {
+    padding-top: 5%;
+}
+
+footer {
+    background-color: var(--green);
+
+    font-size: var(--small);
+    color: var(--blue);
+
+    padding: 5%;
+    gap: 5%;
+
+    box-shadow: inset 0px 10px 20px -10px var(--blue);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: var(--blue);
+
+    font-family: "Yesteryear";
+    color: var(--cream);
+    font-size: var(--normal);
+    letter-spacing: .3rem;
+
+    width: 300px;
+    padding: 20px;
+    border-radius: 1em;
+    border: none;
+}
+
+svg {
+    fill: var(--blue);
+    width: 100px;
+}
+
+h1+svg {
+    transform: scaleX(-1);
+}
+
+.welcome>img {
+    background-image: url("/src/assets/images/brunch.jpg");
+}
+
+.about>img {
+    background-image: url("/src/assets/images/dinner.jpg");
+}
+
+img {
+    min-width: 50%;
+    border-radius: 2em;
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    font-weight: 600;
+    color: var(--blue);
+}
